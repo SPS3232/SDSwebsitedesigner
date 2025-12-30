@@ -1,0 +1,11 @@
+Update website from GitHub
+
+1) On your local computer:
+cd f:\devvapp\SDSwebsitedesign
+git add .
+git commit -m "Update site"
+git push origin main
+
+2) On your server:
+cd /home/seacoastdigitalservices.com/public_html
+git pull origin main
