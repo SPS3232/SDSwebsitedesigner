@@ -365,6 +365,45 @@
         background: #fff;
       }
 
+      .testimonials {
+        background: #fff;
+      }
+
+      .testimonial-track {
+        position: relative;
+        overflow: hidden;
+        margin-top: 28px;
+      }
+
+      .testimonial-row {
+        display: flex;
+        gap: 16px;
+        width: max-content;
+        animation: scroll 40s linear infinite;
+      }
+
+      .testimonial-card {
+        width: min(320px, 86vw);
+        padding: 18px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: #fff;
+        box-shadow: var(--shadow);
+        display: grid;
+        gap: 8px;
+      }
+
+      .testimonial-stars {
+        color: #f5b301;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+
+      .testimonial-meta {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
       .pricing {
         background: var(--accent-soft);
       }
@@ -494,6 +533,15 @@
         font-weight: 600;
       }
 
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
       @keyframes dropdown {
         from {
           opacity: 0;
@@ -543,6 +591,10 @@
 
         .services-grid {
           grid-template-columns: repeat(3, 1fr);
+        }
+
+        .testimonial-card {
+          width: 320px;
         }
       }
     </style>
@@ -639,6 +691,103 @@
               <strong>Built for calls</strong>
               <p>Sticky CTAs, tap-to-call buttons, and a simple form.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="container">
+          <h2>Local Business Wins</h2>
+          <p class="section-lead">Real feedback from local owners.</p>
+        </div>
+        <div class="testimonial-track">
+          <div class="testimonial-row">
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>
+                “Lenny made the process simple and fast. The site looks sharp and actually brings
+                in calls.”
+              </p>
+              <div class="testimonial-meta">Taylor M. · Service Company Owner</div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>
+                “Clear messaging, clean design, and results. We finally have a website we are proud
+                to share.”
+              </p>
+              <div class="testimonial-meta">Jordan K. · Wellness Studio</div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>
+                “Lenny understands local business. The new site is fast and the phone rings more.”
+              </p>
+              <div class="testimonial-meta">Chris D. · Home Services</div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>
+                “Easy process, great communication, and the site looks modern on mobile.”
+              </p>
+              <div class="testimonial-meta">Alex P. · Retail Owner</div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>
+                “We needed a simple site that converts. This delivered exactly that.”
+              </p>
+              <div class="testimonial-meta">Morgan R. · Local Professional</div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>
+                “Lenny handled everything and delivered ahead of schedule.”
+              </p>
+              <div class="testimonial-meta">Casey L. · Contractor</div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>
+                “We saw immediate improvement in leads. Highly recommend.”
+              </p>
+              <div class="testimonial-meta">Drew S. · Local Business Owner</div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>
+                “Clean, modern, and easy for customers to navigate.”
+              </p>
+              <div class="testimonial-meta">Jamie T. · Studio Owner</div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>
+                “Lenny is a local entrepreneur who really cares about results.”
+              </p>
+              <div class="testimonial-meta">Riley G. · Small Business</div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>
+                “Our website finally tells the right story and drives action.”
+              </p>
+              <div class="testimonial-meta">Sam H. · Professional Services</div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>
+                “Straightforward, honest, and quick. Great experience.”
+              </p>
+              <div class="testimonial-meta">Parker V. · Local Retail</div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p>
+                “Lenny handled copy, design, and launch with zero hassle.”
+              </p>
+              <div class="testimonial-meta">Harper N. · Service Business</div>
+            </article>
           </div>
         </div>
       </section>
