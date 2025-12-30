@@ -815,9 +815,11 @@
           </div>
           <form
             class="form"
-            method="get"
-            action="mailto:support@seacoastdigitalservices.com?subject=New%20Web%20Lead!"
+            method="post"
+            action="https://formsubmit.co/support@seacoastdigitalservices.com"
           >
+            <input type="hidden" name="_subject" value="New Web Lead!" />
+            <input type="hidden" name="_captcha" value="false" />
             <input type="text" name="name" placeholder="Your name" required />
             <input type="text" name="business_name" placeholder="Business name" required />
             <input type="text" name="business_type" placeholder="Type of business" required />
