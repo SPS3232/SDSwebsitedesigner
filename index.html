@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Seacoast Digital Services | High-Converting One-Page Websites</title>
+    <meta
+      name="description"
+      content="Modern, fast, conversion-focused one-page websites for local businesses in New Hampshire, Massachusetts, and Maine."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="web design New Hampshire, web design Massachusetts, web design Maine, local business website, one-page website, small business web design, Seacoast Digital Services"
+    />
+    <meta name="author" content="Seacoast Digital Services" />
+    <meta name="geo.region" content="US-NH" />
+    <meta name="geo.region" content="US-MA" />
+    <meta name="geo.region" content="US-ME" />
+    <meta name="geo.placename" content="New Hampshire, Massachusetts, Maine" />
+    <meta name="geo.position" content="43.1939;-71.5724" />
+    <meta name="ICBM" content="43.1939, -71.5724" />
+    <link rel="canonical" href="https://seacoastdigitalservices.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Seacoast Digital Services" />
+    <meta
+      property="og:description"
+      content="Conversion-focused one-page websites for local businesses in NH, MA, and ME."
+    />
+    <meta property="og:url" content="https://seacoastdigitalservices.com/" />
+    <meta
+      property="og:image"
+      content="https://seacoastdigitalservices.com/ChatGPT_Image_Dec_29__2025__08_41_18_PM-removebg-preview.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Spectral:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #0b1b2b;
+        --muted: #4a5b6c;
+        --accent: #0f7ac4;
+        --accent-soft: #e8f3fb;
+        --border: #e3e8ee;
+        --shadow: 0 10px 30px rgba(15, 122, 196, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.6;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1120px, 92vw);
+        margin: 0 auto;
+      }
+
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .brand img {
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+      }
+
+      .nav-links {
+        display: none;
+        gap: 18px;
+        color: var(--muted);
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: #fff;
+        cursor: pointer;
+      }
+
+      .menu-toggle span,
+      .menu-toggle span::before,
+      .menu-toggle span::after {
+        content: "";
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: var(--text);
+        border-radius: 999px;
+        position: relative;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      .menu-toggle span::before {
+        position: absolute;
+        transform: translateY(-6px);
+      }
+
+      .menu-toggle span::after {
+        position: absolute;
+        transform: translateY(6px);
+      }
+
+      .menu-toggle.is-open span {
+        transform: rotate(45deg);
+      }
+
+      .menu-toggle.is-open span::before {
+        transform: rotate(90deg);
+      }
+
+      .menu-toggle.is-open span::after {
+        opacity: 0;
+      }
+
+      .mobile-menu {
+        display: none;
+        position: absolute;
+        right: 4vw;
+        top: 72px;
+        width: min(320px, 92vw);
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        padding: 16px;
+        z-index: 99;
+        transform-origin: top right;
+        animation: dropdown 0.2s ease;
+      }
+
+      .mobile-menu.active {
+        display: grid;
+        gap: 10px;
+      }
+
+      .mobile-menu a {
+        padding: 10px 12px;
+        border-radius: 10px;
+        color: var(--text);
+        font-weight: 500;
+        background: #fff;
+        border: 1px solid transparent;
+      }
+
+      .mobile-menu a:hover {
+        border-color: var(--border);
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 20px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 600;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .cta.primary {
+        background: var(--accent);
+        color: #fff;
+        box-shadow: var(--shadow);
+      }
+
+      .cta.secondary {
+        border-color: var(--border);
+        color: var(--text);
+        background: #fff;
+      }
+
+      .cta:hover {
+        transform: translateY(-1px);
+      }
+
+      .hero {
+        padding: 72px 0 48px;
+        background: radial-gradient(
+            circle at 15% 20%,
+            rgba(15, 122, 196, 0.12),
+            transparent 45%
+          ),
+          radial-gradient(circle at 85% 0%, rgba(16, 180, 120, 0.1), transparent 40%);
+      }
+
+      .hero-grid {
+        display: grid;
+        gap: 28px;
+      }
+
+      .eyebrow {
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 0.95rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: clamp(2.2rem, 4vw, 3.6rem);
+        line-height: 1.1;
+        margin: 12px 0;
+        letter-spacing: -0.02em;
+      }
+
+      .subhead {
+        font-size: clamp(1rem, 1.6vw, 1.2rem);
+        color: var(--muted);
+        margin-bottom: 24px;
+        max-width: 560px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-card {
+        background: #fff;
+        border-radius: 18px;
+        padding: 24px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-card h3 {
+        margin: 0 0 8px;
+        font-size: 1.1rem;
+      }
+
+      .hero-card p {
+        margin: 0 0 12px;
+        color: var(--muted);
+      }
+
+      .trust {
+        padding: 36px 0;
+      }
+
+      .trust-grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .trust-item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 12px;
+        padding: 18px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+      }
+
+      .trust-icon {
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center;
+        background: var(--accent-soft);
+        border-radius: 12px;
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      section {
+        padding: 56px 0;
+      }
+
+      h2 {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        margin: 0 0 12px;
+        letter-spacing: -0.02em;
+      }
+
+      .section-lead {
+        color: var(--muted);
+        max-width: 620px;
+      }
+
+      .list {
+        margin: 24px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 12px;
+      }
+
+      .list li {
+        padding: 14px 16px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: #fff;
+      }
+
+      .pricing {
+        background: var(--accent-soft);
+      }
+
+      .pricing-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 28px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      .price {
+        font-size: clamp(2.2rem, 5vw, 3.2rem);
+        font-weight: 700;
+        margin: 10px 0;
+        color: var(--accent);
+      }
+
+      .price-note {
+        color: var(--muted);
+      }
+
+      .two-col {
+        display: grid;
+        gap: 26px;
+      }
+
+      .about-card {
+        padding: 22px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: #fff;
+      }
+
+      .services-grid {
+        display: grid;
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .service {
+        padding: 18px;
+        border-radius: 14px;
+        border: 1px dashed var(--border);
+        background: #fff;
+      }
+
+      .faq {
+        border-top: 1px solid var(--border);
+      }
+
+      .accordion {
+        margin-top: 24px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .accordion-item {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .accordion-button {
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: none;
+        padding: 18px;
+        font-family: inherit;
+        font-size: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .accordion-panel {
+        padding: 0 18px 18px;
+        color: var(--muted);
+        display: none;
+      }
+
+      .accordion-item.active .accordion-panel {
+        display: block;
+      }
+
+      .final-cta {
+        background: linear-gradient(120deg, #ffffff, #eef7ff 60%, #e6fbf4);
+        border-top: 1px solid var(--border);
+      }
+
+      .form {
+        display: grid;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .form input,
+      .form textarea,
+      .form select {
+        padding: 12px 14px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        font: inherit;
+        background: #fff;
+      }
+
+      .form textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .footer {
+        padding: 28px 0 40px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .phone-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      @keyframes dropdown {
+        from {
+          opacity: 0;
+          transform: translateY(-8px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @media (min-width: 768px) {
+        .nav-links {
+          display: flex;
+        }
+
+        .menu-toggle,
+        .mobile-menu {
+          display: none;
+        }
+
+        .hero-grid {
+          grid-template-columns: repeat(2, 1fr);
+          align-items: center;
+        }
+
+        .hero-content {
+          text-align: left;
+        }
+
+        .hero-actions {
+          justify-content: flex-start;
+        }
+
+        .phone-pill {
+          justify-content: flex-start;
+        }
+
+        .trust-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .two-col {
+          grid-template-columns: repeat(2, 1fr);
+          align-items: start;
+        }
+
+        .services-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a class="brand" href="#top">
+          <img
+            src="ChatGPT_Image_Dec_29__2025__08_41_18_PM-removebg-preview.png"
+            alt="Seacoast Digital Services logo"
+          />
+          <span>Seacoast Digital Services</span>
+        </a>
+        <nav class="nav-links">
+          <a href="#who">Who This Is For</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#about">About</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+        </button>
+        <a class="cta primary" href="tel:+16032393286">Call Now</a>
+      </div>
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#who">Who This Is For</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Get a Free Strategy Call</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="eyebrow">Local websites that convert</div>
+            <h1>Your next website should bring in calls, not just clicks.</h1>
+            <p class="subhead">
+              We build clean, fast, one-page websites for local businesses across New Hampshire,
+              Massachusetts, and Maine. Simple process. Clear pricing. Built to turn visitors into
+              real customers.
+            </p>
+            <div class="hero-actions">
+              <a class="cta primary" href="#contact">Get a Free Strategy Call</a>
+              <a class="cta secondary" href="#pricing">See the $499 Package</a>
+            </div>
+            <p class="phone-pill" style="margin-top: 16px;">
+              <span>Call:</span>
+              <a href="tel:+16032393286">603-239-3286</a>
+            </p>
+            <p class="phone-pill" style="margin-top: 8px;">
+              <span>Email:</span>
+              <a href="mailto:support@seacoastdigitalservices.com"
+                >support@seacoastdigitalservices.com</a
+              >
+            </p>
+          </div>
+          <div class="hero-card">
+            <h3>Launch in 7-10 days</h3>
+            <p>
+              You send your info. We do the rest. Copy, design, and build included so you can stay
+              focused on running your business.
+            </p>
+            <div class="hero-actions">
+              <a class="cta primary" href="#contact">Book Your Spot</a>
+              <a class="cta secondary" href="#addons">Add-On Services</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust">
+        <div class="container trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon">01</div>
+            <div>
+              <strong>Clear message</strong>
+              <p>We write simple, direct copy that makes it easy to say yes.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">02</div>
+            <div>
+              <strong>Speed matters</strong>
+              <p>Fast load times keep visitors engaged and improve SEO.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">03</div>
+            <div>
+              <strong>Built for calls</strong>
+              <p>Sticky CTAs, tap-to-call buttons, and a simple form.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="who">
+        <div class="container">
+          <h2>Who This Is For</h2>
+          <p class="section-lead">
+            If you serve local customers and want a website that helps you close jobs, this is for
+            you.
+          </p>
+          <ul class="list">
+            <li>Home service pros: HVAC, plumbing, roofing, landscaping</li>
+            <li>Local wellness: chiropractors, therapists, fitness studios</li>
+            <li>Professional services: legal, accounting, real estate</li>
+            <li>Small retail or food businesses that need more calls</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="pricing" class="pricing">
+        <div class="container two-col">
+          <div>
+            <h2>One-Page Website Package</h2>
+            <p class="section-lead">
+              A complete, conversion-ready website for a flat, local-friendly price. No surprises.
+            </p>
+            <ul class="list">
+              <li>Custom design with your branding</li>
+              <li>Copywriting and messaging included</li>
+              <li>Mobile-first, fast, and SEO-ready</li>
+              <li>Launch support + basic analytics setup</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <h3>All-in Package</h3>
+            <div class="price">$499</div>
+            <p class="price-note">One-time build. Hosting available if you need it.</p>
+            <div class="hero-actions">
+              <a class="cta primary" href="#contact">Start My Website</a>
+              <a class="cta secondary" href="tel:+16032393286">Call to Confirm</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why">
+        <div class="container two-col">
+          <div>
+            <h2>Why This Works</h2>
+            <p class="section-lead">
+              Local buyers make fast decisions. We remove friction and give them a clear next step.
+            </p>
+          </div>
+          <div>
+            <ul class="list">
+              <li>One clear offer keeps visitors focused</li>
+              <li>Strategic CTAs guide the next action</li>
+              <li>Trust signals reduce doubt quickly</li>
+              <li>Clean design builds credibility fast</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container two-col">
+          <div>
+            <h2>About Seacoast Digital Services</h2>
+            <p class="section-lead">
+              I am a solo founder who has helped local businesses stand out online for years. I
+              keep things simple, move fast, and focus on results for owners in NH, MA, and ME.
+            </p>
+          </div>
+          <div class="about-card">
+            <strong>What you get working with me</strong>
+            <ul class="list">
+              <li>Direct contact with the person building your site</li>
+              <li>Local market insight for New England customers</li>
+              <li>Clear timelines and quick revisions</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="addons">
+        <div class="container">
+          <h2>Optional Add-On Services</h2>
+          <p class="section-lead">
+            Start lean, then add what you need once the site is live.
+          </p>
+          <div class="services-grid">
+            <div class="service">
+              <strong>Local SEO Boost</strong>
+              <p>Google Business Profile cleanup, citation sync, and SEO basics.</p>
+            </div>
+            <div class="service">
+              <strong>Review Funnel</strong>
+              <p>Automated review requests that grow your rating fast.</p>
+            </div>
+            <div class="service">
+              <strong>Monthly Updates</strong>
+              <p>Small changes, new offers, and seasonal refreshes.</p>
+            </div>
+            <div class="service">
+              <strong>Photo Direction</strong>
+              <p>Simple guidance for better before/after and team shots.</p>
+            </div>
+            <div class="service">
+              <strong>Lead Tracking</strong>
+              <p>Call tracking numbers and form tracking for ROI.</p>
+            </div>
+            <div class="service">
+              <strong>Ads Landing Page</strong>
+              <p>Dedicated page for Google or Facebook ads.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="faq">
+        <div class="container">
+          <h2>FAQ</h2>
+          <p class="section-lead">Quick answers before you book a call.</p>
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-button" type="button">
+                How fast can you launch?
+                <span>+</span>
+              </button>
+              <div class="accordion-panel">
+                Most projects launch in 3-5 days once you send your details.
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-button" type="button">
+                Do you provide hosting?
+                <span>+</span>
+              </button>
+              <div class="accordion-panel">
+                Yes. If you already have hosting, we can use that too.
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-button" type="button">
+                What if I need more than one page?
+                <span>+</span>
+              </button>
+              <div class="accordion-panel">
+                We can expand later. The one-page site is a great conversion-first foundation.
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-button" type="button">
+                Do you work with my industry?
+                <span>+</span>
+              </button>
+              <div class="accordion-panel">
+                If you serve local customers in NH, MA, or ME, we can help.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="final-cta">
+        <div class="container two-col">
+          <div>
+            <h2>Ready for a website that brings in real leads?</h2>
+            <p class="section-lead">
+              Tell us about your business. We will respond quickly with next steps and a clear
+              timeline.
+            </p>
+            <p class="phone-pill">
+              <span>Prefer to talk now?</span>
+              <a href="tel:+16032393286">603-239-3286</a>
+            </p>
+            <p class="phone-pill" style="margin-top: 8px;">
+              <span>Or email:</span>
+              <a href="mailto:support@seacoastdigitalservices.com"
+                >support@seacoastdigitalservices.com</a
+              >
+            </p>
+          </div>
+          <form
+            class="form"
+            method="get"
+            action="mailto:support@seacoastdigitalservices.com?subject=New%20Web%20Lead!"
+          >
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="text" name="business_name" placeholder="Business name" required />
+            <input type="text" name="business_type" placeholder="Type of business" required />
+            <input type="email" name="email" placeholder="Email address" required />
+            <input type="tel" name="phone" placeholder="Phone number" />
+            <select name="service">
+              <option value="">What do you need most?</option>
+              <option value="one-page">One-page website</option>
+              <option value="redesign">Website refresh</option>
+              <option value="seo">Local SEO help</option>
+            </select>
+            <textarea name="message" placeholder="Tell us about your business"></textarea>
+            <button class="cta primary" type="submit">Request My Free Call</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div>Serving New Hampshire, Massachusetts, and Maine.</div>
+        <div>© 2025 Seacoast Digital Services. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script>
+      const accordionButtons = document.querySelectorAll(".accordion-button");
+      accordionButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const item = button.parentElement;
+          const isActive = item.classList.contains("active");
+          document.querySelectorAll(".accordion-item").forEach((entry) => {
+            entry.classList.remove("active");
+          });
+          if (!isActive) {
+            item.classList.add("active");
+          }
+        });
+      });
+
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mobileMenu = document.querySelector("#mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.classList.toggle("is-open");
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        mobileMenu.classList.toggle("active", isOpen);
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle.classList.remove("is-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          mobileMenu.classList.remove("active");
+        });
+      });
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Seacoast Digital Services",
+        "url": "https://seacoastdigitalservices.com/",
+        "logo": "https://seacoastdigitalservices.com/ChatGPT_Image_Dec_29__2025__08_41_18_PM-removebg-preview.png",
+        "image": "https://seacoastdigitalservices.com/ChatGPT_Image_Dec_29__2025__08_41_18_PM-removebg-preview.png",
+        "telephone": "+1-603-239-3286",
+        "email": "support@seacoastdigitalservices.com",
+        "areaServed": ["New Hampshire", "Massachusetts", "Maine"],
+        "description": "Modern, fast, conversion-focused one-page websites for local businesses in New Hampshire, Massachusetts, and Maine."
+      }
+    </script>
+  </body>
+</html>
