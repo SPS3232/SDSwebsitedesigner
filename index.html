@@ -26,6 +26,7 @@
     <link rel="canonical" href="https://seacoastdigitalservices.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Seacoast Digital Services" />
+    <meta property="og:site_name" content="Seacoast Digital Services" />
     <meta
       property="og:description"
       content="Conversion-focused one-page websites for local businesses in NH, MA, and ME."
@@ -36,6 +37,15 @@
       content="https://seacoastdigitalservices.com/seacoast-digital-services-logo.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Seacoast Digital Services" />
+    <meta
+      name="twitter:description"
+      content="Conversion-focused one-page websites for local businesses in NH, MA, and ME."
+    />
+    <meta
+      name="twitter:image"
+      content="https://seacoastdigitalservices.com/seacoast-digital-services-logo.png"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -971,7 +981,10 @@
               <div class="accordion-panel">
                 Yes. Hosting is $99 per month and includes listing you in our service provider
                 directory at
-                <a href="https://www.seacoastpriorityservices.com" target="_blank" rel="noreferrer"
+                <a
+                  href="https://www.seacoastpriorityservices.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   >seacoastpriorityservices.com</a
                 >. If you only want hosting, it is $49.99 per month and includes your business
                 domain name.
@@ -1071,15 +1084,43 @@
 
     <script>
       const accordionButtons = document.querySelectorAll(".accordion-button");
+      accordionButtons.forEach((button, index) => {
+        const item = button.parentElement;
+        const panel = item.querySelector(".accordion-panel");
+        const buttonId = `faq-button-${index + 1}`;
+        const panelId = `faq-panel-${index + 1}`;
+        button.setAttribute("id", buttonId);
+        button.setAttribute("aria-expanded", "false");
+        button.setAttribute("aria-controls", panelId);
+        if (panel) {
+          panel.setAttribute("id", panelId);
+          panel.setAttribute("role", "region");
+          panel.setAttribute("aria-labelledby", buttonId);
+          panel.setAttribute("aria-hidden", "true");
+        }
+      });
       accordionButtons.forEach((button) => {
         button.addEventListener("click", () => {
           const item = button.parentElement;
           const isActive = item.classList.contains("active");
           document.querySelectorAll(".accordion-item").forEach((entry) => {
             entry.classList.remove("active");
+            const entryButton = entry.querySelector(".accordion-button");
+            const entryPanel = entry.querySelector(".accordion-panel");
+            if (entryButton) {
+              entryButton.setAttribute("aria-expanded", "false");
+            }
+            if (entryPanel) {
+              entryPanel.setAttribute("aria-hidden", "true");
+            }
           });
           if (!isActive) {
             item.classList.add("active");
+            button.setAttribute("aria-expanded", "true");
+            const panel = item.querySelector(".accordion-panel");
+            if (panel) {
+              panel.setAttribute("aria-hidden", "false");
+            }
           }
         });
       });
