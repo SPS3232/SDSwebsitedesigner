@@ -78,6 +78,9 @@
         color: var(--text);
         background: var(--bg);
         line-height: 1.6;
+        user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
       }
 
       a {
@@ -404,6 +407,9 @@
         border-radius: 12px;
         font: inherit;
         background: #fff;
+        user-select: text;
+        -webkit-user-select: text;
+        -ms-user-select: text;
       }
 
       .form textarea {
@@ -809,6 +815,15 @@
       if (successMessage && window.location.search.includes("success=1")) {
         successMessage.hidden = false;
       }
+
+      ["copy", "cut", "contextmenu", "dragstart", "selectstart"].forEach((eventName) => {
+        document.addEventListener(eventName, (event) => {
+          const isFormField = event.target.closest("input, textarea, select");
+          if (!isFormField) {
+            event.preventDefault();
+          }
+        });
+      });
 
       menuToggle.addEventListener("click", () => {
         const isOpen = menuToggle.classList.toggle("is-open");
